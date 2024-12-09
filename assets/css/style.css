@@ -63,6 +63,11 @@ nav ul{
     display: none;
     font-size: 25px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.menu-icon:hover,
+.menu-icon.active{
+    color: #FF902A;
 }
 
 nav ul li{
@@ -239,6 +244,7 @@ gap: 30px;
     border: 5px solid #5a07074f;
 }
 
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 1200px){
     .hero{
@@ -255,7 +261,23 @@ gap: 30px;
     }
     
     nav ul{
-        display: none ;
+        /* display: none ; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        background-color: #2F2105;
+        width: 300px;
+        height: 300px;
+        padding-top: 75px;
+        color: var(--txt-clr);
+        margin-top: -900px;
+        transition: 0.3s ease-in-out;
+        
+        
+    }
+    nav ul.active{
+        margin-top: 0;
     }
     
     .menu-icon{
@@ -280,7 +302,7 @@ gap: 30px;
 
     .hero-btn button{
         width: 150px;
-        font-size: 15px;
+        font-size: 17px;
     }
     
 }
